@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 export default class ContactsList extends React.Component {
   state = {
@@ -29,6 +30,10 @@ export default class ContactsList extends React.Component {
           value={this.state.query} 
           onChange={this.handleQuery} 
           placeholder='search contacts'
+        />
+        <Link  
+        className='add-contact'
+        to='/create'
         />
        </div>
         <ol className="contact-list">
